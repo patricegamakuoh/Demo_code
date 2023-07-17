@@ -1,0 +1,50 @@
+"List of all funtions inside the static archived (.a) file"
+
+"Bellow are details of all the functiond found in the object (.a) file, i have commented 
+out the functions and variable definations being used in the firmware"
+
+cs1238.c.obj: all c file functions and defined variables
+
+00000001 C CHECK_cs1238      //Defination    
+00000001 C CHECK_cs1238ok    //Defination
+         U ets_delay_us
+00000000 T F_AD_Clock        //Defination
+00000000 T F_Rd_AdReg_data   //Defination
+00000000 T F_Read_AD         //Defination
+00000000 T F_Wr_AdReg        //Defination
+         U gpio_get_level
+         U gpio_set_direction
+         U gpio_set_level
+00000001 C n_zero_front      //Defination
+00000001 C p_zero_front      //Defination
+00000000 B R_Temp_byte       //Defination
+
+cs1238.c.obj: functions in use 
+ets_delay_us();              //used 
+F_Rd_AdReg_data();           //used
+
+pid.c.obj: all c functions and defined variables 
+00000000 B cnt_fan_start
+00000000 B f_fan_start
+00000001 C f_pid
+00000000 B f_temp_direction
+00000001 C f_uart
+         U open_door
+00000000 T PID_Init
+00000000 T PID_Position
+00000000 B psArgument_Ek
+00000000 B psArgument_Ek_1
+00000000 B psArgument_Ek_2
+00000002 C psArgument_Kp
+00000000 D psArgument_out0
+00000002 C psArgument_pwmCycle
+00000000 B psArgument_SEk
+00000002 C psArgument_T
+00000002 C psArgument_Td
+00000002 C psArgument_Ti
+00000000 T record_data
+         U time_flag
+
+cs1238.c.obj: functions in use 
+PID_Init();
+PID_Position();
